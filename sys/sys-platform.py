@@ -62,4 +62,8 @@ def is_darwin():
 
 
 def is_windows():
+
+    # import subprocess
+    # subprocess.mswindows   # return True or False
+
     return __platform__ == PLATFORM_WINDOWS
