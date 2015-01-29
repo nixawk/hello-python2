@@ -1,7 +1,8 @@
 #!/usr/bin/env python
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 flag = True
+
 
 def get_method():
     if flag:
