@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.DEBUG,
 
 # using the key from the Paramiko demo files
 # https://github.com/paramiko/paramiko/blob/master/demos/test_rsa.key
-host_key = paramiko.RSAKey(filename='/home/notfound/share/test_rsa.key')
+host_key = paramiko.RSAKey(filename='/home/someone/test_rsa.key')
 
 
 class Server(paramiko.ServerInterface):
