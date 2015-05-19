@@ -10,17 +10,17 @@ class server(object):
     def __init__(self, host, port):
         self.addr = (host, port)
 
-    def worker_thread(self, client, client_addr):
+    def handle_client(self, client, client_addr):
 
         try:
             while True:
                 data = client.recv(1024)
                 print "[*] data from %s:%s" % client_addr
 
-                if data:
-                    client.sendall(data)
-                else:
+                if not data:
                     break
+
+                client.sendall(data)
 
         finally:
             print "[*] close thread tcp/%d" % client_addr[1]
@@ -36,9 +36,8 @@ class server(object):
 
         while True:
             client, client_addr = self.sock.accept()
-            t = threading.Thread(
-                target=self.worker_thread,
-                args=(client, client_addr))
+            t = threading.Thread(target=self.handle_client,
+                                 args=(client, client_addr))
 
             print "[*] start a new thread with %s:%s" % client_addr
             t.start()
