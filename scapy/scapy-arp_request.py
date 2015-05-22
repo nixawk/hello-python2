@@ -15,7 +15,7 @@ logger = logging.getLogger('arpscanner')
 # disable scapy verbose mode
 conf.verb = 0
 
-# disable scapy scapy warning
+# disable scapy warning
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 
 
@@ -37,7 +37,7 @@ def arpscanner(iplist, lock):
             arpres = srp1(ether/arp, timeout=0.05)
 
             if arpres and arpres.haslayer('ARP'):
-                logger.info('%s \t %s' % (ip, arpres.hwdst))
+                logger.info('%s \t %s' % (ip, arpres['ARP'].hwsrc))
             else:
                 logger.debug('%s \t %s' % (ip, None))
 
