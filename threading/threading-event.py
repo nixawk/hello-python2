@@ -1,6 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
 
+"""
+ threading.Event()
+
+     A factory function that returns a new event object.
+     An event manages a flag that can be set to true with the set() method
+     and reset to false with the clear() method.
+     The wait() method blocks until the flag is true.
+"""
+
+
 import threading
 import logging
 import time
