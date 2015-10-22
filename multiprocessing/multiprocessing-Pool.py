@@ -5,10 +5,18 @@ from multiprocessing import Pool
 
 
 def f(x):
-    a, b = x
-    return a + b
+    return x * x
 
 
 if __name__ == "__main__":
-    p = Pool(5)
-    print(p.map(f, [(1, 2), (2, 3), (3, 4)]))
+    # pool = Pool(5)
+    pool = Pool(processes=4)            # start 4 worker process
+    result = pool.apply_async(f, [10])  # evaluate "f(10)" asyncchronously
+    print result.get(timeout=1)
+    print pool.map(f, range(10))
+
+"""
+Note:
+    the methods of a pool should only ever be used by the process which created
+    it.
+"""
