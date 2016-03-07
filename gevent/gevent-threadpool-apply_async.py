@@ -9,6 +9,7 @@
 
 from gevent.threadpool import ThreadPool
 from gevent.pool import Pool
+import gevent
 import logging
 
 
@@ -27,10 +28,11 @@ def callback_(args):
 
 def invalid():
     tp = ThreadPool(10)
-    for i in xrange(1, 300):
-        # It's invalid to use callback.
-        tp.apply_async(foo, args=(i, ), kwds=None, callback=callback_)
-    tp.join()
+
+    # It's invalid to use callback.
+    greenlets = [tp.apply_async(foo, args=(i, ), kwds=None, callback=callback_)
+                 for i in xrange(1, 300)]
+    gevent.joinall(greenlets)
 
 
 def valid():
@@ -42,4 +44,4 @@ def valid():
 
 if __name__ == "__main__":
     invalid()
-    valid()
+    # valid()
