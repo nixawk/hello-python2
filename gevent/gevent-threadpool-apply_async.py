@@ -36,7 +36,7 @@ def invalid():
 def valid():
     tp = Pool(10)
     for i in xrange(1, 300):
-        tp.apply_async(foo, args=(i, ), kwds=None, callback=callback_)
+        tp.add(tp.apply_async(foo, args=(i, ), kwds=None, callback=callback_))
     tp.join()
 
 
