@@ -26,6 +26,14 @@ def callback_(args):
     return args
 
 
+def invalid1():
+    tp = ThreadPool(10)
+    for i in xrange(1, 300):
+        # It's invalid to use callback.
+        tp.apply_async(foo, args=(i, ), kwds=None, callback=callback_)
+    tp.join()
+
+
 def invalid():
     tp = ThreadPool(10)
 
@@ -43,5 +51,6 @@ def valid():
 
 
 if __name__ == "__main__":
+    invalid1()
     invalid()
     # valid()
