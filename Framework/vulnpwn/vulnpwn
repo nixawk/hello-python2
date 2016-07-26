@@ -1,0 +1,18 @@
+#!/usr/bin/python
+# -*-  coding: utf-8 -*-
+
+##
+# Current source: https://github.com/open-security/vulnpwn/
+##
+
+
+import sys
+
+
+sys.dont_write_bytecode = True
+
+from lib.base import base
+
+
+fw = base.Base()
+fw.shell_will_go()
