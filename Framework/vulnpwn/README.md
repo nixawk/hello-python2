@@ -1,7 +1,7 @@
 
 # vulnpwn
 
-[![Python 2.7](https://img.shields.io/badge/python-2.7-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://github.com/open-security/vulnpwn/blob/master/LICENSE) [![Twitter](https://img.shields.io/badge/twitter-@vulnpwn-blue.svg)](https://twitter.com/nixawk)
+[![Python 2.7](https://img.shields.io/badge/python-2.7-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://github.com/nixawk/python-programming/blob/master/Framework/vulnpwn/LICENSE) [![Twitter](https://img.shields.io/badge/twitter-@vulnpwn-blue.svg)](https://twitter.com/nixawk)
 
 
 ## Overview
@@ -101,13 +101,10 @@ vulnpwn (exploits/autopwn) > run
 - Module validation
 - Autopwn
 
-## Documentation
-
-Documentation is available in [wiki](https://github.com/open-security/vulnpwn/wiki) pages.
 
 ## How to Contribute
 
 1. Check for open issues or open a fresh issue to start a discussion around a feature idea or a bug.
-2. Fork [the repository](https://github.com/open-security/vulnpwn) on GitHub to start making your changes to the **master** branch (or branch off of it).
+2. Fork [the repository](https://github.com/nixawk/python-programming/tree/master/Framework/vulnpwn) on GitHub to start making your changes to the **master** branch (or branch off of it).
 3. Write a test which shows that the bug was fixed or that the feature works as expected.
 4. Send a pull request and bug the maintainer until it gets merged and published. Make sure to add yourself to [THANKS](./THANKS.md).
