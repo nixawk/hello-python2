@@ -2,12 +2,17 @@
 # -*- coding: utf8 -*-
 
 # http://www.celeryproject.org/
+# http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html
+# http://docs.celeryproject.org/en/latest/userguide/tasks.html#task-result-backends
 
 from celery import Celery
 import requests
 
 # app = Celery('tasks', broker='amqp://guest@localhost//')
-app = Celery('tasks', backend='amqp', broker='amqp://guest@localhost//')
+app = Celery('tasks', backend='amqp', broker='amqp://')
+app.conf.update(
+    CELERY_IGNORE_RESULT=False,  # Default: True
+)
 
 
 @app.task
