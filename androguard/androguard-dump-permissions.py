@@ -35,7 +35,7 @@ import sys
 def dump_permissions(apkfile):
     return [perm
             for perm in APK(apkfile).get_AndroidManifest().toxml().splitlines()
-            if 'uses-permission ' in perm.lower()]
+            if 'android.permission' in perm.lower()]
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
