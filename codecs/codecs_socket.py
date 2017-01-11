@@ -76,3 +76,19 @@ if __name__ == '__main__':
     # Clean up
     s.close()
     server.socket.close()
+
+    # Code from https://pymotw.com/2/codecs/index.html#unicode-primer
+    # It will make an error as follow:
+    """
+root@sh:~# python socketserver_codecs.py
+Traceback (most recent call last):
+  File "socketserver_codecs.py", line 43, in <module>
+    server = SocketServer.TCPServer(address, Echo)
+  File "/usr/lib/python2.7/SocketServer.py", line 417, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/SocketServer.py", line 431, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+"""
