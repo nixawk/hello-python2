@@ -35,13 +35,18 @@ def foo():
 if __name__ == '__main__':
     foo()
 
-    # ----AAAA----
-    # ----CCCC----
-    # ----BBBB----
-    # this is a demo string.
+# decorator_one ----1111----
+# decorator_one ----2222----
+# decorator_two ----AAAA----
+# decorator_two ----BBBB----
+# decorator_two ----CCCC----
+# decorator_one ----3333----
+# this is a demo string.
 
 
 # References
 # https://wiki.python.org/moin/PythonDecorators
 # http://en.wikipedia.org/wiki/Decorator_pattern
 # http://www.python.org/peps/pep-0318.html
+# http://stackoverflow.com/questions/739654/how-to-make-a-chain-of-function-decorators
+# http://stackoverflow.com/questions/308999/what-does-functools-wraps-do
