@@ -15,6 +15,9 @@ import signal
 import random
 import hashlib
 
+import os
+os.environ['QT_QPA_PLATFORM'] = 'offscreen'
+
 
 logging.basicConfig(level=logging.INFO)
 
@@ -68,3 +71,5 @@ if __name__ == '__main__':
 
 ## References
 # https://moshimon.wordpress.com/2016/10/02/how-to-render-a-html-page-with-selenium-webdriver-phantomjs-in-python/
+# https://github.com/ariya/phantomjs/issues/14376
+# https://github.com/SeleniumHQ/selenium/blob/master/py/selenium/webdriver/phantomjs/service.py
