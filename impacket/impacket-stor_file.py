@@ -2,11 +2,10 @@
 # -*- coding: utf-8 -*-
 
 '''
-$ python2.7 impacket-retr_file.py
+$  python2.7 impacket-stor_file.py
 INFO:__main__:192.168.206.114/445 - establish a smb connection
 INFO:__main__:192.168.206.114/445 - smb login: Administrator / p@ssw0rd
-INFO:__main__:192.168.206.114/445 - read remote file: C:\Windows\system32\winrm.cmd
-INFO:__main__:@cscript //nologo "%~dpn0.vbs" %*
+INFO:__main__:192.168.206.114/445 - upload data to remote file: C:\Windows\system32\hellosmb.txt
 '''
 
 # Please compare [impacket-readfile.pcap] with [impacket-retr_file.pcap]
