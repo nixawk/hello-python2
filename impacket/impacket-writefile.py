@@ -8,12 +8,11 @@
 
 
 '''
-$ python2.7 impacket-readfile.py
+$ python2.7 impacket-writefile.py
 INFO:__main__:192.168.206.114/445 - establish a smb connection
-INFO:__main__:192.168.206.114/445 - smb login: Administrator / password
-INFO:__main__:192.168.206.114/445 - read remote file: C:\Windows\system32\winrm.cmd
-INFO:__main__:192.168.206.114/445 - file contents: @cscript //nologo "%~dpn0.vbs" %*
-
+INFO:__main__:192.168.206.114/445 - smb login: Administrator / p@ssw0rd
+INFO:__main__:192.168.206.114/445 - write remote file: C:\Windows\system32\hellosmb.txt
+INFO:__main__:192.168.206.114/445 - file contents: Created by smb_connection
 INFO:__main__:192.168.206.114/445 - close smb connection
 '''
 
