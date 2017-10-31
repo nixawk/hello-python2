@@ -259,7 +259,6 @@ class Rsync(object):
         md5 = hashlib.md5()
         md5.update(password)
         md5.update(challenge)
-        md5.digest()
 
         pwdhash = base64.b64encode(md5.digest())  # 'NCjPJpWP7VPP2dO7X0jhrw=='
         pwdhash = pwdhash.rstrip('==')
